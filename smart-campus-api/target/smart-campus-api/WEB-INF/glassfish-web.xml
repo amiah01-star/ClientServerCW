@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glassfish-web-app PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Servlet 3.0//EN" "http://glassfish.org/dtds/glassfish-web-app_3_0-1.dtd">
+<glassfish-web-app error-url="">
+  <!--
+        Explicitly set the context root so the WAR is always deployed at
+        /smart-campus-api regardless of the WAR file name.
+
+        Your complete base URL will be:
+            http://localhost:8080/smart-campus-api/api/v1
+    -->
+  <!--
+        delegate="true" means child class-loader (app) delegates to the
+        parent (GlassFish server) class-loader first. This is critical for
+        avoiding duplicate Jersey/Jakarta classes — the server's copies win.
+    -->
+  <class-loader delegate="true"/>
+  <jsp-config>
+    <property name="keepgenerated" value="true">
+      <description>Keep a copy of the generated servlet class java code.</description>
+    </property>
+  </jsp-config>
+</glassfish-web-app>

@@ -37,42 +37,6 @@ The Smart Campus API is a RESTful web service built with **Jakarta EE 10 / JAX-R
 
 ---
 
-## Project Structure
-smart-campus-api/
-├── pom.xml # Maven configuration
-├── README.md # This file
-├── VIDEO_SCRIPT.md # Video demonstration script
-├── src/
-│ └── main/
-│ ├── java/com/smartcampus/
-│ │ ├── config/
-│ │ │ └── ApplicationConfig.java # JAX-RS configuration
-│ │ ├── model/
-│ │ │ ├── Room.java # Room entity
-│ │ │ ├── Sensor.java # Sensor entity
-│ │ │ └── SensorReading.java # Reading entity
-│ │ ├── resource/
-│ │ │ ├── DiscoveryResource.java # API discovery
-│ │ │ ├── RoomResource.java # Room endpoints
-│ │ │ ├── SensorResource.java # Sensor endpoints
-│ │ │ └── SensorReadingResource.java # Sub-resource for readings
-│ │ ├── service/
-│ │ │ ├── RoomService.java # Room business logic
-│ │ │ ├── SensorService.java # Sensor business logic
-│ │ │ └── SensorReadingService.java # Reading business logic
-│ │ ├── exception/
-│ │ │ ├── RoomNotEmptyException.java
-│ │ │ ├── LinkedResourceNotFoundException.java
-│ │ │ └── SensorUnavailableException.java
-│ │ ├── mapper/
-│ │ │ ├── RoomNotEmptyExceptionMapper.java # 409
-│ │ │ ├── LinkedResourceNotFoundExceptionMapper.java # 422
-│ │ │ ├── SensorUnavailableExceptionMapper.java # 403
-│ │ │ └── GlobalExceptionMapper.java # 500
-│ │ └── filter/
-│ │ └── LoggingFilter.java # Request/response logging
-│ └── webapp/WEB-INF/
-│ └── web.xml # Servlet configuration
 
 
 ---
